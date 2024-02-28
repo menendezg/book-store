@@ -21,18 +21,18 @@
                     </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <form method="post" action="{% url 'logout' %}">
+                        {% comment %} <form method="post" action="{% url 'account_logout' %}">
                             {% csrf_token %}
                             <button class="nav-link" type="submit">Log out</button>
-                        </form>
-                        {% comment %} <a class="nav-link" href="{% url "logout" %}">Log out </a> {% endcomment %}
+                        </form> {% endcomment %}
+                        <a class="nav-link" href="{% url "account_logout" %}">Log out </a>
                     </li>
                     {% else %}
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url "login" %}">Log in</a>
+                        <a class="nav-link" href="{% url "account_login" %}">Log in</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url "signup" %}">Sign up </a>
+                        <a class="nav-link" href="{% url "account_signup" %}">Sign up </a>
                     </li>
                     {% endif %}
                 </ul>
