@@ -6,3 +6,4 @@ psycopg2-binary==2.9.3
 crispy-bootstrap5==2024.2
 django-crispy-forms==2.1
 django-allauth==0.61.1
+pillow==9.0.1
